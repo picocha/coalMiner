@@ -6,15 +6,17 @@ import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
   background: "rgb(251 241 225)",
+  background: "rgb(68,100,120)",
+  backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
 });
 
 const Input = styled("input")(({ theme }) => ({
   fontSize: 10,
   fontWeight: 300,
   padding: "10px 12px",
-  borderRadius: 0,
+  borderRadius: 15,
   border: "1px solid #555",
-  background: "white",
+  background: "#FFDD3C",
   width: "100%",
   outline: "none",
   color: theme.palette.primary.main,
@@ -36,7 +38,7 @@ export default function ReferralLink({ address }) {
           marginTop={2}
           paddingX={3}
         >
-          Earn 12% of the BNB used to bake beans from anyone who uses your
+          Earn 12% of the BNB used to mine from anyone who uses your
           referral link
         </Typography>
       </CardContent>

@@ -7,22 +7,28 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
-  background: "rgb(255 252 248)",
+  // background: "rgb(255 252 248)",
+  background: "rgb(68,100,120)",
+  backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
   marginBottom: 24,
 });
 
 const nutritionFacts = [
   {
     label: "Max Daily Return",
-    value: 8,
+    value: 7,
   },
   {
     label: "APR",
-    value: "2,920",
+    value: "2,555",
   },
   {
-    label: "Dev Fee",
+    label: "Deposit Fee",
     value: 3,
+  },
+  {
+    label: "Withdrawal Fee",
+    value: 6,
   },
 ];
 

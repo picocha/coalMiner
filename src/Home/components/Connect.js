@@ -29,21 +29,21 @@ export default function Connect({ responsive = true }) {
 
   return responsive ? (
     <ConnectButton
-      color="secondary"
+      color="flare"
       variant="contained"
       disabled={loading}
       onClick={() => (address ? disconnect() : connect())}
     >
-      {address ? "Disconnect" : "Connect"}
+      <strong> {address ? "Disconnect" : "Connect"}</strong>
     </ConnectButton>
   ) : (
     <SmallScreenConnectButton
-      color="secondary"
+      color="flare"
       variant="contained"
       disabled={loading}
       onClick={() => (address ? disconnect() : connect())}
     >
-      {address ? "Disconnect" : "Connect"}
+      <strong> {address ? "Disconnect" : "Connect"}</strong>
     </SmallScreenConnectButton>
   );
 }

@@ -7,9 +7,11 @@ const BnbInput = styled("input")({
   fontWeight: 500,
   padding: "12px 90px 12px 16px",
   textAlign: "right",
-  borderRadius: 0,
+  borderRadius: 15,
   border: "1px solid #555",
-  background: "white",
+  background: "#FFDD3C",
+  // background: "rgb(255,105,97)",
+  // backgroundImage: "linear-gradient(172deg, rgba(255,105,98,1) 0%, rgba(255,121,116,1) 25%, rgba(255,153,151,0.4948354341736695) 75%, rgba(255,169,169,1) 100%)",
   width: "100%",
   outline: "none",
   "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
@@ -19,7 +21,7 @@ const BnbInput = styled("input")({
   },
 });
 
-export default function PriceInput({ value, max, onChange = () => {} }) {
+export default function PriceInput({ value, max, text,onChange = () => {} }) {
   return (
     <Box position="relative">
       <BnbInput
@@ -33,11 +35,11 @@ export default function PriceInput({ value, max, onChange = () => {} }) {
         fontSize={24}
         position="absolute"
         top={9}
-        right={18}
+        right={10}
         fontWeight={500}
         color="black"
       >
-        BNB
+        {text}
       </Typography>
     </Box>
   );

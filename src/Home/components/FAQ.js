@@ -19,7 +19,7 @@ const style = {
   boxShadow: 24,
   px: 4,
   py: 6,
-  borderRadius: 8,
+ borderRadius: 8,
   overflow: "auto",
 };
 

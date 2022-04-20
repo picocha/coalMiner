@@ -24,7 +24,7 @@ export const ContractProvider = ({ children }) => {
     if (!chainId) {
       return;
     }
-    if (parseInt(chainId) !== config.chainId) {
+    if ((parseInt(chainId) !== config.BSC.chainId) && (parseInt(chainId) !== config.ROPSTEN.chainId) && (parseInt(chainId) !== config.AVAX.chainId) && (parseInt(chainId) !== config.POLYGON.chainId) ) {
       setSnackbar({
         type: "error",
         message: "Wrong network",
@@ -36,11 +36,60 @@ export const ContractProvider = ({ children }) => {
     const web3Instance = new Web3();
     web3Instance.setProvider(Web3.givenProvider);
 
-    setWeb3(web3Instance);
-    const contract = new web3Instance.eth.Contract(abi, config.contractAddress);
-    setContract(contract);
+    if (parseInt(chainId) === config.BSC.chainId) {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.BSC.contractAddress);
+        setContract(contract);
+      } else if (parseInt(chainId) === config.ROPSTEN.chainId) {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.ROPSTEN.contractAddress);
+        setContract(contract);
+      } else if (parseInt(chainId) === config.AVAX.chainId) {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.AVAX.contractAddress);
+        setContract(contract);
+      } else if (parseInt(chainId) === config.POLYGON.chainId) {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.POLYGON.contractAddress);
+        setContract(contract);
+      } else {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.BSC.contractAddress);
+        setContract(contract);
+      }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chainId]);
+
+
+/*   useEffect(() => {
+    if (!chainId) {
+      return;
+    }
+    if (parseInt(chainId) === config.BSC.chainId || parseInt(chainId) === config.ROPSTEN.chainId) {
+      const web3Instance = new Web3();
+      web3Instance.setProvider(Web3.givenProvider);
+      if (parseInt(chainId) === config.BSC.chainId) {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.BSC.contractAddress);
+        setContract(contract);
+      } else {
+        setWeb3(web3Instance);
+        const contract = new web3Instance.eth.Contract(abi, config.ROPSTEN.contractAddress);
+        setContract(contract);
+      }
+    } else {
+      setSnackbar({
+        type: "error",
+        message: "Wrong network",
+      });
+      setWrongNetwork(true);
+      return;
+    }
+    setWrongNetwork(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chainId]); */
+
+
 
   const getBnbBalance = (address) => web3.eth.getBalance(address);
   const fromWei = (wei, unit = "ether") =>

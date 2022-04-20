@@ -28,7 +28,6 @@ export default function Home() {
       <BakeCard />
       <NutritionFacts />
       <ReferralLink address={address} />
-      <TwitterFeed />
       <FAQs />
       <Footer />
     </Wrapper>
