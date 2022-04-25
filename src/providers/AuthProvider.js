@@ -116,7 +116,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (web3Modal.cachedProvider) {
-      connect();
+      // connect();
     }
     // eslint-disable-next-line
   }, []);

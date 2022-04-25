@@ -20,7 +20,7 @@ export default function Header() {
       <img src={logo} alt="" width={"100%"} style={{ marginTop: -64 }} />
       <Connect responsive={false} />
       <Typography variant="h6" marginTop={-3}>
-        <strong>The world's 1st multi-chain and sustainable reward pool.</strong>
+        <strong>The world's 1st multi-chain and sustainable reward pool. (BSC/Polygon/AVAX)</strong>
       </Typography>
     </Wrapper>
   );

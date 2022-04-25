@@ -115,7 +115,7 @@ export default function BakeCard() {
       setSelect("")
       setNativeName("MATIC")
     } else {
-      setSelect("Please select a network on your wallet")
+      setSelect("Please connect your wallet first!")
       setNativeName("-")
     }
   }, [chainId]);
@@ -233,17 +233,101 @@ export default function BakeCard() {
     setLoading(false);
   };
 
+  async function polygon() {
+    const chainId = 137 // Polygon Mainnet
+if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: web3.utils.toHex(chainId) }]
+        });
+      } catch (err) {
+          // This error code indicates that the chain has not been added to MetaMask
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainName: 'Polygon Mainnet',
+                chainId: web3.utils.toHex(chainId),
+                nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
+                rpcUrls: ['https://polygon-rpc.com/']
+              }
+            ]
+          });
+        }
+      }
+    }
+  } 
+
+  async function avax() {
+    const chainId = 43114 // Polygon Mainnet
+
+if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: web3.utils.toHex(chainId) }]
+        });
+      } catch (err) {
+          // This error code indicates that the chain has not been added to MetaMask
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainName: 'Avalanche Mainnet',
+                chainId: web3.utils.toHex(chainId),
+                nativeCurrency: { name: 'AVAX', decimals: 18, symbol: 'AVAX' },
+                rpcUrls: ['https://api.avax.network/ext/bc/C/rpc']
+              }
+            ]
+          });
+        }
+      }
+    }
+  } 
+
+  async function bsc() {
+    const chainId = 56 // Polygon Mainnet
+
+  if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: web3.utils.toHex(chainId) }]
+        });
+      } catch (err) {
+          // This error code indicates that the chain has not been added to MetaMask
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainName: 'Avalanche Mainnet',
+                chainId: web3.utils.toHex(chainId),
+                nativeCurrency: { name: 'BNB', decimals: 18, symbol: 'BNB' },
+                rpcUrls: ['https://bsc-dataseed.binance.org/']
+              }
+            ]
+          });
+        }
+      }
+    }
+  } 
+
+
   return (
     <CardWrapper>
       {loading && <LinearProgress color="secondary" />}
       <CardContent>
       <Grid
           container
-          justifyContent="space-between"
+          justifyContent="center"
           alignItems="center"
           mt={3}
         >
-          <Typography variant="body1">{select}</Typography>
+          <Typography variant="body1"><strong>{select}</strong></Typography>
         </Grid>
         <Grid
           container
