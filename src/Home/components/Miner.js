@@ -1,14 +1,14 @@
 import { styled } from "@mui/system";
 
-import Connect from "./components/Connect";
-import Header from "./components/Header";
-import BakeCard from "./components/BakeCard";
-import NutritionFacts from "./components/NutritionFacts";
-import ReferralLink from "./components/ReferralLink";
-import { useAuthContext } from "../providers/AuthProvider";
-import Footer from "./components/Footer";
-import FAQs from "./components/FAQ";
-import TwitterFeed from "./components/TwitterFeed";
+import Connect from "./Connect";
+import Header from "./Header";
+import BakeCard from "./BakeCard";
+import NutritionFacts from "./NutritionFacts";
+import ReferralLink from "./ReferralLink";
+import { useAuthContext } from "../../providers/AuthProvider";
+import Footer from "./Footer";
+import FAQs from "./FAQ";
+import TwitterFeed from "./TwitterFeed";
 
 const Wrapper = styled("div")(({ theme }) => ({
   maxWidth: 400,

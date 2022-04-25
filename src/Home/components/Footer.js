@@ -1,9 +1,13 @@
 import Grid from "@mui/material/Grid";
 
 import { config } from "../../config";
-import esIcon from "../assets/ESIcon.png";
+import esIcon2 from "../assets/ESIcon.png";
 import tgIcon from "../assets/TGIcon.png";
 import twIcon from "../assets/TWIcon.png";
+import discordIcon from "../assets/discord.svg";
+import twitterIcon from "../assets/twitter.svg";
+import esIcon from "../assets/es.svg"
+
 
 export default function Footer() {
   return (
@@ -14,13 +18,13 @@ export default function Footer() {
         </a>
       </Grid>
       <Grid item>
-        <a href="https://t.me/BakedBeansMiner" target="__blank">
-          <img src={tgIcon} alt="" width={48} height={48} />
+        <a href="https://discord.gg/yQVBpPjb" target="__blank">
+          <img src={discordIcon} alt="" width={48} height={48} />
         </a>
       </Grid>
       <Grid item>
-        <a href="https://twitter.com/BakedBeansMiner" target="__blank">
-          <img src={twIcon} alt="" width={48} height={48} />
+        <a href="https://twitter.com/coalminer_io" target="__blank">
+          <img src={twitterIcon} alt="" width={48} height={48} />
         </a>
       </Grid>
     </Grid>

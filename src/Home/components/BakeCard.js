@@ -24,8 +24,8 @@ const CardWrapper = styled(Card)({
   // background: "rgb(15,42,181)",
   // backgroundImage: "radial-gradient(circle, rgba(15,42,181,1) 0%, rgba(210,19,58,0.4472163865546218) 100%)",
   // background: "linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)",
-  background: "rgb(68,100,120)",
-  backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
+  background: "#FFFDD0",
+  // backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
 
   marginBottom: 24,
 });
@@ -52,6 +52,7 @@ export default function BakeCard() {
   const { address, chainId } = useAuthContext();
   const [contractBNB, setContractBNB] = useState(0);
   const [nativeName, setNativeName] = useState('BNB');
+  const [select, setSelect] = useState('');
   const [walletBalance, setWalletBalance] = useState({
     bnb: 0,
     beans: 0,
@@ -69,26 +70,31 @@ export default function BakeCard() {
     }
     if (parseInt(chainId) === 56) {
       setNativeName("BNB");
+      setSelect("")
       getBnbBalance(config.BSC.contractAddress).then((amount) => {
         setContractBNB(fromWei(amount));
       });
     } else if (parseInt(chainId) === 3) {
       setNativeName("rETH");
+      setSelect("")
       getBnbBalance(config.ROPSTEN.contractAddress).then((amount) => {
         setContractBNB(fromWei(amount));
       });
     }  else if (parseInt(chainId) === 43114) {
       setNativeName("AVAX");
+      setSelect("")
       getBnbBalance(config.AVAX.contractAddress).then((amount) => {
         setContractBNB(fromWei(amount));
       });
     } else if (parseInt(chainId) === 137) {
       setNativeName("MATIC");
+      setSelect("")
       getBnbBalance(config.POLYGON.contractAddress).then((amount) => {
         setContractBNB(fromWei(amount));
       });
     } else {
       setNativeName("BNB");
+      setSelect("")
       getBnbBalance(config.BSC.contractAddress).then((amount) => {
         setContractBNB(fromWei(amount));
       });
@@ -97,15 +103,20 @@ export default function BakeCard() {
 
   useEffect(() => {
     if (parseInt(chainId) === 56) {
+      setSelect("")
       setNativeName("BNB");
     } else if (parseInt(chainId) === 3) {
+      setSelect("")
       setNativeName("rETH")
     } else if (parseInt(chainId) === 43114) {
+      setSelect("")
       setNativeName("AVAX")
     } else if (parseInt(chainId) === 137) {
+      setSelect("")
       setNativeName("MATIC")
     } else {
-      setNativeName("BNB")
+      setSelect("Please select a network on your wallet")
+      setNativeName("-")
     }
   }, [chainId]);
 
@@ -226,6 +237,14 @@ export default function BakeCard() {
     <CardWrapper>
       {loading && <LinearProgress color="secondary" />}
       <CardContent>
+      <Grid
+          container
+          justifyContent="space-between"
+          alignItems="center"
+          mt={3}
+        >
+          <Typography variant="body1">{select}</Typography>
+        </Grid>
         <Grid
           container
           justifyContent="space-between"
@@ -250,7 +269,7 @@ export default function BakeCard() {
           alignItems="center"
           mt={3}
         >
-          <Typography variant="body1">Your COAL</Typography>
+          <Typography variant="body1">Your COALS Cart</Typography>
           <Typography variant="h5">{walletBalance.beans} COAL</Typography>
         </Grid>
         <Box paddingTop={4} paddingBottom={3}>

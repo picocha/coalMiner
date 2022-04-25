@@ -8,8 +8,9 @@ import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
   // background: "rgb(255 252 248)",
-  background: "rgb(68,100,120)",
-  backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
+  background: "#FFFDD0",
+  // background: "rgb(68,100,120)",
+  // backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
   marginBottom: 24,
 });
 

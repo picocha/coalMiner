@@ -5,9 +5,10 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
-  background: "rgb(251 241 225)",
-  background: "rgb(68,100,120)",
-  backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
+  background: "#FFFDD0",
+  // background: "rgb(251 241 225)",
+  // background: "rgb(68,100,120)",
+  // backgroundImage: "linear-gradient(126deg, rgba(68,100,120,1) 0%, rgba(54,69,64,1) 100%)",
 });
 
 const Input = styled("input")(({ theme }) => ({
@@ -38,7 +39,7 @@ export default function ReferralLink({ address }) {
           marginTop={2}
           paddingX={3}
         >
-          Earn 12% of the BNB used to mine from anyone who uses your
+          Earn 8% of the BNB used to mine from anyone who uses your
           referral link
         </Typography>
       </CardContent>
