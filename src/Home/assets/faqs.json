@@ -28,12 +28,16 @@
     "a": "You can either use an app with a dapp browser and choose the Metamask/Injected option or simply use any browser that you want and choose WalletConnect to connect to your wallet's app on your phone."
   },
   {
-    "q": "Is it better to mine coal or sell coal?",
+    "q": "Is it better to Mine COAL or Sell COAL?",
     "a": "By design, mining coal will be more profitable than selling coal in the long-term."
   },
   {
     "q": "How do referrals work?",
-    "a": "Once your wallet is connected to the Coal Miner website, you will notice your referral address appear at the bottom of the page. When a new user hires miners after clicking your personal referral link, the contract will send a token value equal to 8% instantly to your mined coals. Be smart, use it to mine coal and build yourself a stream of income."
+    "a": "Once your wallet is connected to the Coal Miner website, you will notice your referral address appear at the bottom of the page. When a new user fills their COALS Cart after clicking your personal referral link, the contract will send a token value equal to 8% instantly to your COALS Cart. Be smart, use it to mine coal and build yourself a stream of passive income."
+  },
+  {
+    "q": "Where can I find the whitepaper",
+    "a": "https://docdro.id/StnMipn"
   },
   {
     "q": "When did Baked Beans launch?",
