@@ -1,31 +1,31 @@
 [
   {
-    "q": "What happens when I mine coals?",
-    "a": "When you mine Coals, your token gets locked into the Coal Miner smart contract and rewards you with 7% daily return every day."
+    "q": "1. What happens when I Fill COALS Cart?",
+    "a": "When you Fill COALS Cart by swapping a currency of your choice for COALS, your COALS token gets locked into the Coal Miner smart contract and rewards you with 7% daily return every day."
   },
   {
     "q": "Can I take my initial token back?",
-    "a": "You can’t take your initial token back but once Coals are mined they work for you indefinitely. Providing you with an unlimited amount of the token you invested, earned at a rate of 7% daily should you choose to continue mining."
+    "a": "You can’t take your initial token back but once COALS are added to your Cart, they work for you indefinitely. This will provide you with an unlimited amount of the token you invested, earned at a rate of 7% daily should you choose to continue mining."
   },
   {
     "q": "How much are my fees?",
-    "a": "There is 3% fee when you deposit and 6% fee when you withdraw in order to pay for marketing costs and developing the Coal Miner ecosystem."
+    "a": "There is a 3% fee when you deposit (Fill COALS Cart) and 6% fee when you withdraw (SELL COAL) in order to pay for marketing costs, protocol sustainability costs and developing the Coal Miner ecosystem."
   },
   {
-    "q": "When is the best time to mine coals?",
+    "q": "When can I Add COALS to my Cart and Mine Coal?",
     "a": "Always! No matter when you hire miners, you will begin with a return rate of 7% daily."
   },
   {
     "q": "How often should I mine coals (compound)?",
-    "a": "We recommend that you compound at least once per day but you are free to do so as often as you wish."
+    "a": "We recommend that you compound at least once everyday day but you are free to do so as often as you wish."
   },
   {
     "q": "How is Coal Miner sustainable?",
-    "a": "Coal Miner is sustained by continued community support, just as every other crypto coin, token or project. The difference is that since there is no token, there is no price to dump. As long as coals are being mined in the contract, there will be rewards!"
+    "a": "Coal Miner is sustained by continued community support, just as every other crypto project, token or coin. As long as coals are being mined in the contract, rewards will be given to each miner!"
   },
   {
     "q": "How to use Coal Miner on my phone?",
-    "a": "You can either use an app with a dapp browser and choose the Metamask/Injected option or simply use any browser that you want and choose WalletConnect to connect to your wallet's app on your phone."
+    "a": "You can either use an app with a dapp browser and choose the Metamask/Wallet option or simply use any browser that you want and choose WalletConnect to connect to your wallet's app on your phone."
   },
   {
     "q": "Is it better to Mine COAL or Sell COAL?",
@@ -37,10 +37,10 @@
   },
   {
     "q": "Where can I find the whitepaper",
-    "a": "https://docdro.id/StnMipn"
+    "a": "OFFICIAL WHITEPAPER: https://docdro.id/StnMipn"
   },
   {
     "q": "When did Baked Beans launch?",
-    "a": "Launch date is April. 25th 2022."
+    "a": "Launch date is April. 26th 2022."
   }
 ]

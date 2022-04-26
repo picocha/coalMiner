@@ -144,7 +144,7 @@ export default function BakeCard() {
             return 0;
           }),
         contract.methods
-          .beanRewards(address)
+          .coalRewards(address)
           .call()
           .catch((err) => {
             console.error("beanrewards", err);
@@ -354,7 +354,7 @@ if (window.ethereum.networkVersion !== chainId) {
           mt={3}
         >
           <Typography variant="body1">Your COALS Cart</Typography>
-          <Typography variant="h5">{walletBalance.beans} COAL</Typography>
+          <Typography variant="h5">{walletBalance.beans} COALS</Typography>
         </Grid>
         <Box paddingTop={4} paddingBottom={3}>
           <Box>
