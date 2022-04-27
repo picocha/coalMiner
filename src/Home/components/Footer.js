@@ -41,7 +41,7 @@ export default function Footer() {
         </a>
       </Grid>
       <Grid item>
-        <a href="https://discord.gg/yQVBpPjb" target="__blank">
+        <a href="https://discord.gg/Q9SwxURJ" target="__blank">
           <img src={discordIcon} alt="" width={48} height={48} />
         </a>
       </Grid>
